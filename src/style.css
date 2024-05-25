@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgb(217, 217, 233);
+    min-height: 100vh;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.grid {
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: repeat(3, 300px);
+    grid-template-rows: 350px;
+    gap: 25px;
+}
+
+
+.about-header {
+    display: flex;
+    flex-direction: row;
+    max-width: 800px;
+    min-height: 300px;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+.headshot {
+    width: 40%;
+    min-height: 300px;
+    display: flex;
+    justify-content: center;
+}
+
+.headshot img {
+    width: 100%;
+    object-fit: contain;
+}
+
+.bio {
+    max-width: 60%;
+    padding: 30px;
+}
+
+@media (max-width: 1000px) {
+    .grid {
+        grid-template-columns: repeat(2, 300px);
+    }
+
+    .about-header {
+        max-width: 600px;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 600px) {
+    .grid {
+        grid-template-columns: 300px;
+    }
+
+   
+    .headshot {
+        width: 225px;
+    }
+}
+
+.card-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.card {
+    box-sizing: content-box;
+    min-height: 300px;
+    background: rgb(244, 241, 241);
+    border-radius: 8px;
+    transition: 200ms ease-in-out;
+    filter: drop-shadow(5px 5px 10px rgb(235, 230, 230));
+    overflow: clip;
+}
+
+.card img {
+    width: 100%;
+    object-fit: contain;
+    border-radius: 8px 8px 0 0;
+}
+
+h1 {
+    font-family: 'Playfair Display';
+}
+
+h3 {
+    font-family: sans-serif;
+    font-weight: bold;
+}
+
+.card:hover {
+    transform: scale(1.02);
+    cursor: pointer;
+}
+
+.cardMiddle {
+    padding: 5px 15px 5px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cardDescription {
+    height: 100%;
+    padding: 5px 15px 5px 15px;
+    overflow: scroll;
+}
+
+.links img {
+    width: 20px;
+    transition: 300ms;
+    padding: 2px;
+
+}
+
+.links img:hover {
+    filter: invert(35%);
+    transform: scale(1.02);
+}
